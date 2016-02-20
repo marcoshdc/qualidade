@@ -14,6 +14,7 @@ class HomeController extends Controller
 {
  
 	public function index(){
+	
 		$dados = DB::table('plantio')
 		->select(DB::raw('sum(total_plantado) as total, sum(total_plantado)/40 as media, sum(distribuicao_gema) as distmedia, calda'))
 		->groupBy('calda')
@@ -22,7 +23,20 @@ class HomeController extends Controller
 	}
 
 
-	public function grafhic(){
+	public function filtro(){
 		
+		$filtro = \Request::all();
+		$unidade = $filtro['selectUnidade'];
+
+		if ($unidade == null) {
+			return view('error.error');
+		}else{
+			$dados = DB::table('plantio')
+			->select(DB::raw('sum(total_plantado) as total, sum(total_plantado)/40 as media, sum(distribuicao_gema) as distmedia, calda'))
+			->where('matricula','=',$unidade)
+			->groupBy('calda')
+			->get();
+			return view ('home',['dados'=>$dados]);
+		}			
 	}
 }

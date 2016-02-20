@@ -10,7 +10,7 @@
     <br>
     <div class="panel panel-default">
         <div class="panel-heading">Lista de Colheita</div>
-                    <table id="example2" class="table">
+                    <table id="example2" class="table table-hover">
                         <thead>
                         <tr>
                             <th style="width: 5%; text-align: center;">ID</th>

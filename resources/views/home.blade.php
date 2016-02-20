@@ -75,6 +75,7 @@
         chart2.draw(data, options);
       }
      </script>
+
     <!--Div that will hold the pie chart-->
 <div class="container-fluid">
   <div class="row">

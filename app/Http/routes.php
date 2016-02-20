@@ -19,6 +19,13 @@ Route::controllers([
 	});
 
 
+
+        Route::post('admin/filtrar/home','HomeController@filtro');
+
+        //rotas de acesso ao painel
+        Route::get('admin/deslogar', 'AdminController@deslogarAdmin');
+
+
 	  //rotas do módulo de colheita
         Route::get('admin/colheita', 'ColheitaController@index');
         Route::get('admin/colheita/editar/{id}', 'ColheitaController@editarColheita');

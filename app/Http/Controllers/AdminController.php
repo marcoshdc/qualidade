@@ -27,5 +27,12 @@ class AdminController extends Controller
     public function home(){
     	return view('home');
     }
+    public function deslogarAdmin(){
+   
+        \Auth::logout();
+        return \Redirect::to('/');
+
+    }
+    
 
 }
