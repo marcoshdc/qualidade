@@ -94,6 +94,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{asset('admin/metas')}}">
+                        <i class="fa fa-th"></i><span>Metas</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{asset('admin/colheita')}}">
                         <i class="fa fa-th"></i><span>Colheita</span>
                     </a>
@@ -128,12 +133,11 @@
                             <label for="selectUnidade">Selecionar Unidade</label>
                             <select id="selectUnidade" name="selectUnidade" class="form-control">
                                <option value="">Selecione</option>
-                                <option value="122">Junqueira</option>
+                                <option value="211940">Junqueira</option>
                              </select>
                         </div>
                 <button type="submit" class="btn btn-primary">Buscar</button>       
             </form>
-
         </section>
         <!-- Main content -->
         <section class="content">

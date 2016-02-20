@@ -7,14 +7,13 @@
 <div class="box-footer">
     <a href="{{asset('admin/plantio')}}"><button class="btn btn-primary">Voltar</button></a>
 </div>
-<section class="content">
     <div class="row">
         <!-- left column -->
 
         <div class="col-md-12 col-xs-12 col-sm-12">
             <div class="box box-primary">
                 <div class="box-header">
-                    <h3 class="box-title">Informações do Plantio</h3>
+                    <h3 style="width: 100%" class="box-title">Informações do Plantio</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 @if(!empty($dados->id))
@@ -34,11 +33,11 @@
                         </div>
                         <div class="form-group">
                             <label for="distribuicao_gema">Distribuição Gemas</label>
-                            <input type="text" class="form-control" value="{{$dados->distribuicao_gema}}" id="distribuicao_gema" name="distribuicao_gema" placeholder="Pontos de Gemas Viaveis">
+                            <input type="text" class="form-control" value="{{$dados->distribuicao_gema}}" id="distribuicao_gema" name="distribuicao_gema" placeholder="Pontos de Gemas Viaveis" style="width: 30%">
                         </div>
                         <div class="form-group">
                             <label for="cobricao">Cobrição</label>
-                            <input type="text" class="form-control" value="{{$dados->cobricao}}" id="cobricao"  name="cobricao" placeholder="Pontos de Cobrição">
+                            <input type="text" class="form-control" value="{{$dados->cobricao}}" id="cobricao"  name="cobricao" placeholder="Pontos de Cobrição" style="width: 30%">
                         </div>
                         <div class="form-group">
                             <label for="fertilizante">Fertilizante</label>
@@ -77,7 +76,6 @@
         </div><!-- /.box -->
     </div>
   </div>
- </section>
 
 	
 

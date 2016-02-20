@@ -77,15 +77,17 @@
      </script>
 
     <!--Div that will hold the pie chart-->
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-xs-12 col-sm-12 col-md-4">
       <h2>
         Heading
       </h2>
+        <div class="col-xs-12 col-sm-6 col-md-12">
         <div id="chart_div">
         </div>
-  
+        </div>
       <p>
         <a class="btn" href="#">View details »</a>
       </p>
@@ -94,10 +96,10 @@
       <h2>
         Heading
       </h2>
+      <div class="col-xs-12 col-sm-8 col-md-12">
         <div id="chart_diva">
-      
         </div>
-  
+        </div>
       <p>
         <a class="btn" href="#">View details »</a>
       </p>

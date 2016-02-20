@@ -15,7 +15,9 @@ Route::controllers([
 
 	Route::get('admin/painel', function () {
         
-    return view('painel');
+    $infoUnidade = DB::table('metas')->get();
+
+    return view('painel',['infoUnidade'=>$infoUnidade]);
 	});
 
 
@@ -49,3 +51,11 @@ Route::controllers([
         Route::get('admin/km/deletar/{id}', 'KmController@deletarKm');
         Route::get('admin/km/novoKm', 'KmController@criar');
         Route::post('admin/km/inserirKm', 'KmController@inserirKm');
+
+        //rotas do módulo de km
+        Route::get('admin/metas', 'MetasController@index');
+        Route::get('admin/metas/editar/{id}', 'MetasController@editarMetas');
+        Route::post('admin/metas/atualizar', 'MetasController@atualizarMetas');
+        Route::get('admin/metas/deletar/{id}', 'MetasController@deletarMetas');
+        Route::get('admin/metas/novaMetas', 'MetasController@criar');
+        Route::post('admin/metas/inserirMetas', 'MetasController@inserirMetas');

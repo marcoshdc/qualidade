@@ -7,48 +7,43 @@
     <div class="box-footer">
         <a href="{{asset('/admin/colheita/novaColheita')}}"><button class="btn btn-primary">Novo Apontamento</button></a>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title">Lista de Colheita</h3>
-                </div><!-- /.box-header -->
+    <br>
+     <div class="table-responsive">
+                <h2 class="box-title" style="text-align: center;">Lista de Colheita</h2>
+                <br>
 
-                <div class="box-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
+                    <table id="example2" class="table table-bordered">
+                       <thead>
                         <tr>
-                            <th style="width: 10%; text-align: center;">ID</th>
-                            <th style="width: 10%; text-align: left;">Matricula</th>
-                            <th style="width: 10%; text-align: left;">Total de Cana(ton)</th>
-                            <th style="width: 10%; text-align: left;">Pontos de Perda</th>
-                            <th style="width: 10%; text-align: left;">Pontos de Erradicação</th>
-                            <th style="width: 10%; text-align: left;">Pontos de Pisoteio</th>
-                            <th style="width: 20%; text-align: center;">Observação</th>
-                            <th style="width: 10%; text-align: center;">Editar</th>
-                            <th style="width: 10%; text-align: center;">Excluir</th>
+                            <th>ID</th>
+                            <th>Matricula</th>
+                            <th>Total de Cana(ton)</th>
+                            <th>Pontos de Perda</th>
+                            <th>Pontos de Erradicação</th>
+                            <th>Pontos de Pisoteio</th>
+                            <th>Observação</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($dados as $dado)
                             <tr>
-                                <td style="text-align: center;">{{$dado->id}}</td>
-                                <td style="text-align: center;">{{$dado->matricula}}</td>
-                                <td style="text-align: center;">{{$dado->total_cana}}</td>
-                                <td style="text-align: center;">{{$dado->perda}}</td>
-                                <td style="text-align: center;">{{$dado->erradicacao}}</td>
-                                <td style="text-align: center;">{{$dado->pisoteio}}</td>
-                                <td style="text-align: center;">{{$dado->observacao}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->id}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->matricula}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->total_cana}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->perda}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->erradicacao}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->pisoteio}}</td>
+                                <td class="info" style="text-align: center;">{{$dado->observacao}}</td>
 
-                                <td style="text-align: center;"><a href="{{asset('admin/colheita/editar/'.$dado->id)}}"><button class="btn btn-primary">Editar</button></a></td>
-                                <td style="text-align: center;"><a href="{{asset('admin/colheita/deletar/'.$dado->id)}}"><button class="btn btn-primary">Excluir</button></a></td>
+                                <td class="danger" style="text-align: center;"><a href="{{asset('admin/colheita/editar/'.$dado->id)}}"><button class="btn btn-primary">Editar</button></a></td>
+                                <td class="danger" style="text-align: center;"><a href="{{asset('admin/colheita/deletar/'.$dado->id)}}"><button class="btn btn-primary">Excluir</button></a></td>
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                </div><!-- /.box-body -->
-            </div>
-        </div>
+                
     </div>
     <script type="text/javascript">
         $(function () {
