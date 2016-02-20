@@ -28,16 +28,66 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="">Qualidade Agricola</a>
-    </div>
+<div class="wrapper">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+        <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Qualidade Agrícola</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{{asset('/img/user2-160x160.jpg')}}" class="user-image" alt="User Image"/>
+                            <span class="hidden-xs">Filipe Tozze</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="{{asset('/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image" />
+                                <p>
+                                    Filipe Tozze - Admin
+                                </p>
+                            </li>
+
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+
+                                <div class="pull-right">
+                                    <a href="{{asset('/admin/deslogar')}}" class="btn btn-default btn-flat">Sair</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image" />
+                </div>
+                <div class="pull-left info">
+                    <p>Alexander Pierce</p>
+                </div>
+            </div>
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
                 <li>
                     <a href="{{asset('admin/home')}}">
                         <i class="fa fa-th"></i><span>Usuarios</span>
@@ -62,21 +112,43 @@
                     <a href="{{asset('admin/km')}}">
                         <i class="fa fa-th"></i><span>Controle de Km</span>
                     </a>
-                </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+                </li>                    
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
 
-  <div class="page">
-    <div class="container">
-        @yield('content')
-    </div>   
-  </div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Dashboard
+                <small>Control panel</small>
+            </h1>
+
+        </section>
+        <!-- Main content -->
+        <section class="content">
+            @yield('content')
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+
+</div><!--wrap-->
+  
+
 <!-- jQuery UI 1.11.2 -->
 <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
 <!-- Bootstrap 3.3.2 JS -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<!-- AdminLTE App -->
+<script src="{{asset('js/app.min.js')}}" type="text/javascript"></script>
+
 
 
 </body>
